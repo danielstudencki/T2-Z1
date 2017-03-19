@@ -2,16 +2,15 @@ if(!("repeat" in String.prototype)) {
 
     String.prototype.repeat = function(count) {
 
-    var text = this.valueOf(),
-        repeated = "";
+        var text = this.valueOf(),
+            repeated = "";
 
-    if(count > 0) {
         for(var i = 0; i < count; i++) {
-            repeated += text;
+                repeated += text;
+            };
+        if(count === 0) {
+            return "";
         };
-    } else if(count === 0) {
-        return "";
-    };
 
     return repeated;
 
